@@ -1,0 +1,20 @@
+<div class="col-lg-4 col-12 mx-auto">
+  <form #registorForm="ngForm" (ngSubmit)="Registor()">
+    <h2 class="text-center text-primary">Sign Up</h2>
+    <hr>
+  
+    <div class="form-group">
+      <input type="text" class="form-control" name="username" placeholder="Username" required [(ngModel)]="model.username">
+    </div>
+  
+    <div class="form-group">
+      <input type="password" class="form-control" name="password" placeholder="Password" required [(ngModel)]="model.password">
+    </div>
+  
+    <div class="form-group text-center">
+      <button class="btn btn-success" [disabled]="!registorForm.valid" type="submit">Register</button>
+      <button class="btn btn-default" type="button" routerLink="/main">Cancel</button>
+    </div>
+    
+  </form>
+</div>
