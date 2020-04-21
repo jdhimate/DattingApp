@@ -24,4 +24,9 @@ export class AuthService {
   public Registor(model): Observable<any> {
     return this.http.post(this.baseUrl + "registor", model);
   }
+
+  IsLogedIn(){
+    const token = localStorage.getItem("token");
+    return !!token;
+  }
 }

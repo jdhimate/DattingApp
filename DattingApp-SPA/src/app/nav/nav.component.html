@@ -6,14 +6,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Matches <span class="sr-only">(current)</span></a>
+      <li class="nav-item active" routerLinkActive="active">
+        <a class="nav-link" routerLink="/matches" >Matches <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Lists</a>
+      <li class="nav-item"  routerLinkActive="active">
+        <a class="nav-link" routerLink="/member-list">Lists</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+      <li class="nav-item"  routerLinkActive="active">
+        <a class="nav-link" routerLink="message" >Messages</a>
       </li>
     </ul>
     <div *ngIf="IsLogedIn()" class="dropdown">
@@ -24,7 +24,7 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edit Profile</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" (click)="Logout()"><i class="fa fa-sign-out"></i>Logout</a>
+        <a class="dropdown-item" (click)="Logout()"><i class="fa fa-sign-out"></i>Logout</a>
       </div>
     </div>
     <form *ngIf="!IsLogedIn()" #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="Login()">
